@@ -1,0 +1,39 @@
+<!--编辑提醒界面-->
+<navigator class="i1" url="../remind/remind" style="width: 75rpx; height: 61rpx; display: flex; box-sizing: border-box; left: 33rpx; top: 20rpx; position: relative">x</navigator>
+
+<form  bindsubmit="formSubmit">
+<view class="d3" style="position: relative; left: 45rpx; top: 40rpx; width: 647rpx; height: 661rpx; display: block; box-sizing: border-box">编辑提醒</view>
+<view class="d4" style="position: relative; left: 59rpx; top: -518rpx; width: 619rpx; height: 71rpx; display: block; box-sizing: border-box">名称：<input name="name" type='text' value="{{remind}}" class="text1"style="width: 406rpx; height: 68rpx; display: block; box-sizing: border-box" style="position: relative; left: 97rpx; top: -45rpx; width: 504rpx; height: 52rpx; display: flex; box-sizing: border-box"></input></view>
+<view class="d1" style="position: relative; left: 59rpx; top: -493rpx; width: 619rpx; height: 71rpx; display: block; box-sizing: border-box">
+
+<picker mode="date" header-text="选择时间"  fields="day" value="{{date}}" bindchange="setDate">
+  <view class="font30">
+    <text class="color3"></text>
+    <text class="color6" style="position: relative; left: 32rpx; top: 21rpx">{{date==''?"请选择年月日▼":date}}</text>
+  </view>
+</picker>
+<picker mode="time" header-text="选择时间"  value="{{time}}" bindchange="setTime">
+  <view class="font30">
+    <text class="color3"></text>
+    <text class="color6" style="position: relative; left: 332rpx; top: -21rpx">{{time==''?"请选择时间▼":time}}</text>
+  </view>
+</picker>
+</view>
+<view class="d2"  style="position: relative; left: 58rpx; top: -460rpx; width: 620rpx; height: 70rpx; display: block; box-sizing: border-box">
+<text>链接：</text><input name="url" type='text' value="{{url}}" style=" width: 508rpx; height: 57rpx; box-sizing: border-box; display: inline-flex; left: 0rpx; top: 432rpx"></input>
+</view>
+<view class="d5" style="position: relative; left: 58rpx; top: -430rpx; width: 619rpx; height: 71rpx; display: block; box-sizing: border-box">重复</view>
+
+<view class='class-view'>
+ <view class="body-view">
+   <switch style="position: relative; left: 564rpx; top: -550rpx; width: 99rpx; height: 61rpx; display: inline-block; box-sizing: border-box"  class='switch-view' checked="{{switch1Checked}}" bindchange="switch1Change" type='switch'/>
+ </view>
+</view>
+<button class="an" bindtap='okok' form-type='submit' style="position: absolute; left: 605rpx; top: 0rpx; width: 146rpx; height: 101rpx; display: flex; box-sizing: border-box">√</button>
+<button bindtap="deleteRemind" style="position: relative; left: -8rpx; top: -477rpx; width: 240rpx; height: 70rpx; display: block; box-sizing: border-box">删除提醒</button>
+</form>
+
+
+
+
+

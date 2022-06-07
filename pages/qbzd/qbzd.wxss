@@ -1,0 +1,291 @@
+/* pages/tt5/qbzd.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  background:rgb(248,231,237);
+  color: rgb(70, 14, 122);
+  height: 100%;
+}
+.e1{
+  display: -webkit-flex;
+  display: flex;
+  width: 375px;
+  height: 100px;
+  background-color:rgb(248,231,237);
+}
+.rl_1{
+  display: flex;
+  position: relative;
+}
+
+
+/* .date{
+  display: flex;
+  position: relative;
+} */
+.rl2{
+  display: flex;
+  position: relative;
+  color: black;
+  font-size: 12px;
+}
+.rl3{
+  display: flex;
+  position: relative;
+  color: black;
+  font-size: 12px;
+}
+.e2{
+  position: absolute;
+  font-size: 1em;
+  text-align: center;
+  /* left: 99rpx; */
+  color: rgb(24, 23, 23);
+  background-color: #cee8f2;
+  border-radius: 10px;
+  height: 250px;
+  width: 275px;
+}
+.e3{
+  width: 250px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+.e4{
+  width: 250px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  background-color: #e7f4f9;
+}
+.e5{
+  width: 250px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  background-color: #e7f4f9;
+}
+.e6{
+  width: 250px;
+  height: 50px;
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  background-color: #e7f4f9;
+}
+.gw1{
+  display: flex;
+  position: relative;
+}
+.gw{
+  display: flex;
+  position: relative;
+}
+.money1{
+  display: flex;
+  position: relative;
+}
+.t1{
+  text-align: center;
+width: 100%;
+line-height: 1em;
+height: 30px;
+display: flex;
+}
+.t2{
+  width: 30px;
+height: 15px;
+background-color: #333;
+display: flex;
+position: relative;
+}
+.t3{
+  width: 25px;
+height: 15px;
+background-color: #333;
+display: flex;
+position: relative;
+}
+.t4{
+  width: 25px;
+height: 15px;
+background-color: #333;
+display: flex;
+        position: relative;
+}
+.t5{
+ width: 55px;
+  height: 25px;
+  background-color: #333;
+  margin-top: 13px;
+  margin-left: 80px;
+}
+.t6{
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  margin-top: 10px;
+  margin-left: 10px;
+  }
+  .t7{
+    width: 30px;
+  height: 15px;
+  background-color: #333;
+  margin-top: 10px;
+  margin-left: 10px;
+  }
+  .t8{
+    width: 25px;
+  height: 15px;
+  background-color: #333;
+  margin-top: 30px;
+  margin-left: -30px;
+  }
+  .t9{
+    width: 25px;
+  height: 15px;
+  background-color: #333;
+  margin-top: 30px;
+  margin-left: 10px;
+  }
+  .t10{
+   width: 55px;
+    height: 25px;
+    background-color: #333;
+    margin-top: 13px;
+    margin-left: 80px;
+  }
+  .t11{
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    margin-top: 10px;
+    margin-left: 10px;
+    }
+    .t12{
+      width: 30px;
+    height: 15px;
+    background-color: #333;
+    margin-top: 10px;
+    margin-left: 10px;
+    }
+    .t13{
+      width: 25px;
+    height: 15px;
+    background-color: #333;
+    margin-top: 30px;
+    margin-left: -30px;
+    }
+    .t14{
+      width: 25px;
+    height: 15px;
+    background-color: #333;
+    margin-top: 30px;
+    margin-left: 10px;
+    }
+    .t15{
+     width: 55px;
+      height: 25px;
+      background-color: #333;
+      margin-top: 13px;
+      margin-left: 80px;
+    }
+    .t16{
+      width: 30px;
+      height: 30px;
+      background-color: #333;
+      margin-top: 10px;
+      margin-left: 10px;
+      }
+      .t17{
+        width: 30px;
+      height: 15px;
+      background-color: #333;
+      margin-top: 10px;
+      margin-left: 10px;
+      }
+      .t18{
+        width: 25px;
+      height: 15px;
+      background-color: #333;
+      margin-top: 30px;
+      margin-left: -30px;
+      }
+      .t19{
+        width: 25px;
+      height: 15px;
+      background-color: #333;
+      margin-top: 30px;
+      margin-left: 10px;
+      }
+      .t20{
+       width: 55px;
+        height: 25px;
+        background-color: #333;
+        margin-top: 13px;
+        margin-left: 80px;
+      }
+      .tt1{
+        width: 55px;
+        height: 25px;
+        font-size: 1em;
+        color: rgba(235, 137, 26, 0.945);
+        /* background-color: rgb(218, 208, 208); */
+        display: flex;
+        position: relative;
+      }
+      .tt2{
+        width: 55px;
+        height: 25px;
+        background-color: #333;
+        margin-top: 28px;
+        margin-left:10px;
+      }
+      .time-plugins{
+        display: flex;
+        position: relative;
+        color: black;
+        margin-top: 28px;
+        margin-left: 10px;
+      }
+      .font30{
+        font-size: 30rpx;
+        display: flex;
+        position: relative;
+      }
+      
+      .color3{
+        color: #333;
+      }
+      
+      .color6{
+        color: #666;
+        font-size: 15px;
+        display: flex;
+        position: relative;
+      }
+      
+      .timeIcon{
+        color:#666;
+        font-size:18rpx;
+        margin-left: 5rpx;
+      }
+      
+      .p1{
+        display: flex;
+        position: relative;
+      }
+      .p2{
+        display: flex;
+        position: relative;
+      }
+      .r11{
+        display: flex;
+        position: relative;
+      }

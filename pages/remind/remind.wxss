@@ -1,0 +1,138 @@
+/* pages/remaid/remaid.wxss */
+page {
+    background-color: #f8e7ed;
+    display: inline;
+  }
+  
+  .time{
+      width: 80px;
+      height: 40px;
+      background-color: red;
+      margin-top: 5px;
+      margin-left: 5px;
+      border-radius: 30rpx;
+  }
+  .date{
+    background-color: blue;
+    width: 80px;
+    height: 30px;
+    margin-top: -30px;
+    margin-left: 86px;
+    border-radius: 30rpx;
+  }
+  .lianjie{
+    width: 200px;
+    height: 15px;
+    background-color: black;
+    margin-top: 8px;
+    margin-left: 5px;
+    border-radius: 30rpx;
+  }
+  .third{
+
+    margin-top: 20rpx;
+    background-color: #cee8f2;
+    border-radius: 50rpx;
+    width: 699rpx;
+    height: 180rpx;
+    
+    /* 居中 */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+}
+.time-plugins{
+  background-color: #cee8f2;
+  border-radius: 50rpx;
+}
+
+  .first{
+    color: black;
+    background-color: #cee8f2;
+    /* margin-top:150px; */
+    margin-bottom: 20rpx;
+    width: 699rpx;
+    height: 180rpx;
+    border-radius: 50rpx;
+    /* display: block; */
+    box-sizing: border-box;
+    /* 居中 */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+}
+.first1{
+  border: 2rpx solid black;
+  border-radius: 20rpx;
+}
+.first2{
+  width: 40px;
+  height: 20px;
+  border: 2rpx solid black;
+}
+.first3{
+  width: 40px;
+  height: 20px;
+  border: 2rpx solid black;
+}
+
+.tp{
+  width: 100px;
+  height: 100px;
+}
+.btn{
+    padding: 0;
+    background-color: transparent;   /*按钮透明*/  
+    border:none;				/*设置按钮边框*/
+    /* width: 100rpx; */
+    /* height: 100rpx; */
+    left: 135px;
+    top: 455px;
+    position: fixed;       /*固定*/
+  }
+  .btn-img{
+    width: 100rpx;
+    height: 100rpx;
+  }
+  
+  /* pages/a/a.wxss */
+.body-view {
+  margin-top: 20px;
+}
+/* /swtich整体大小及背景色/ */
+.wx-switch-input {
+width: 100rpx !important;
+height: 56rpx !important;
+background: -webkit-linear-gradient(left,pink,lightblue,skyblue);
+border: #50d2c2 !important;
+box-sizing: border-box;
+}
+/* /白色样式（false的样式）/ */
+.wx-switch-input::before {
+width: 100rpx !important;
+height: 56rpx !important;
+}
+/* /绿色样式（true的样式）/ */
+.wx-switch-input::after {
+width: 65rpx !important;
+height: 56rpx !important;
+}
+
+ 
+.class-view {
+  margin-top: 30px
+}
+.first4{
+  display: flex;
+  border: 2rpx solid black;
+  display: block;/*block	此元素将显示为块级元素，此元素前后会带有换行符。text 为内联元素，而overflow：hidden；作用于块元素上*/
+  white-space: nowrap;/*取消换行*/
+  overflow: hidden;/*超出的部分隐藏*/
+  text-overflow: ellipsis;/*隐藏的部分用省略号代替*/
+  border-radius: 20rpx;
+}
+.shij{
+  width: 20px;
+  height: 50px;
+  display: flex;
+  border: 2rpx solid black;
+  border-radius: 20rpx;
+}

@@ -1,0 +1,34 @@
+<!--pages/tt5/qbzd.wxml-->
+<view class="e1" style="width: 879rpx; height: 188rpx; display: flex; box-sizing: border-box">
+
+<image src="../image/日历.png" class="r11" style="width: 90rpx; height: 87rpx; display: flex; box-sizing: border-box; left: 26rpx; top: 43rpx; position: relative"></image>
+
+<picker mode="date" header-text="选择时间" fields="month" value="{{date}}" bindchange="bindDateChange" style="width: 90rpx; height: 143rpx; display: block; box-sizing: border-box">
+  <view class="font30" style="width: 179rpx; height: 139rpx; display: block; box-sizing: border-box">
+    <text class="color3"></text>
+    <text class="color6" style="position: relative; left: 26rpx; top: 61rpx; width: 186rpx; height: 57rpx; display: flex; box-sizing: border-box">{{date}}▼</text>
+  </view>
+</picker>
+
+<text class="p1" style="width: 225rpx; height: 59rpx; display: flex; box-sizing: border-box; left: 115rpx; top: 71rpx; position: relative">本月共创建了</text>
+<view class="tt1" style="position: relative; left: 114rpx; top: 70rpx; width: 64rpx; height: 59rpx; display: flex; box-sizing: border-box">{{billList.length}}</view>
+<text class="p2" style="width: 127rpx; height: 59rpx; display: flex; box-sizing: border-box; left: 115rpx; top: 72rpx; position: relative">个账本</text>
+
+
+</view>
+
+
+<view class="e2" style="position: absolute; left: 38rpx; top: 188rpx; width: 690rpx; display: block; box-sizing: border-box; height: 100%">
+  <block wx:for="{{billList}}" wx:key="index" >
+<view bindtap="toDetail" data-index="{{index}}" class="e3" style="position: relative; left: 33rpx; top: 47rpx; width: 612rpx; height: 118rpx; display: flex; box-sizing: border-box">
+
+<view class="t1" style="position: relative; left: 26rpx; top: 29rpx;">{{item.billName}}</view>
+
+</view>
+
+
+</block>
+</view>  
+
+
+

@@ -1,0 +1,35 @@
+<!--pages/remaid/remaid.wxml-->
+<!-- 顶部 -->
+<view>
+  <view class="first" style="width: 750rpx; height: 612rpx; display: block; box-sizing: border-box">
+
+<view class="gwtx1" style="width: 172rpx; height: 50rpx; display: block; box-sizing: border-box; position: relative; left: 26rpx; top: 26rpx">购物提醒</view>
+<image class="tp" src="../image/time.png"  style="position: relative; left: 268rpx; top: -26rpx"></image>
+</view>
+</view>
+<!-- 列表 -->
+<view>
+<block wx:for="{{remindList}}" wx:key="index" >
+  <button bindtap="editRemind" data-index="{{index}}" style="width: 172rpx; height: 76rpx; display: block; box-sizing: border-box; left: 262rpx; top: 24rpx; position: relative" >编辑</button>
+<view class="first1" style="width: 488rpx; height: 111rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: -8rpx">
+ {{item.remindTime}}
+</view>
+
+<view class="first4" style="width: 676rpx; height: 80rpx; display: flex; box-sizing: border-box; position: relative; left: 0rpx; top: 36rpx">{{item.url}}</view>
+
+<view class='class-view'>
+ <view class="body-view">
+   <switch style="width: 100rpx; height: 57rpx; display: inline-block; box-sizing: border-box; position: relative; left: 618rpx; top: -244rpx"  class='switch-view' checked="{{item.status==1?'true':'false'}}" bindchange="switch1Change" type='switch'/>
+ </view>
+
+</view>
+</block>
+</view>
+
+
+<!-- 按钮 -->
+<view class="tab">
+    <navigator url="../bjtx/bjtx" class="btn" bindtap="jumpPage" type="primary"><image class="btn-img" src="/pages/image/add.png"></image></navigator>
+</view>
+
+

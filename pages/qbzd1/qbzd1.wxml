@@ -1,0 +1,32 @@
+<wxs module="filters" src="../filter.wxs"></wxs>
+<view class="e1" style="width: 879rpx; height: 188rpx; display: flex; box-sizing: border-box">
+<image class="rl_1" src="../image/日历.png" style="width: 87rpx; height: 101rpx; display: block; box-sizing: border-box; position: relative; left: 12rpx; top: 36rpx"></image>
+
+<view class="zb-name" style="position: relative; left: 12rpx; top: 57rpx; width: 134rpx; height: 60rpx; display: flex; box-sizing: border-box">{{billName}}</view>
+
+<text class="rl2" style="position: relative; left: 12rpx; top: 54rpx; width: 113rpx; height: 60rpx; display: flex; box-sizing: border-box; font-size: 15px">支出：</text>
+<view class="tt1" style="width: 134rpx; height: 60rpx; display: block; box-sizing: border-box; position: relative; left: 19rpx; top: -10rpx">{{filters.toFix(expenditure/100)}}</view>
+<text class="rl3" style="position: relative; left: 36rpx; top: 54rpx; width: 113rpx; height: 60rpx; display: flex; box-sizing: border-box; font-size: 15px">收入:</text>
+<view class="tt2" style="position: relative; width: 168rpx; height: 60rpx; display: block; box-sizing: border-box; left: -10rpx; top: -10rpx">{{filters.toFix(income/100)}}</view>
+</view>
+
+<view class="e2" style="position: absolute; left: 33rpx; top: 188rpx; width: 690rpx; height: 100%; display: block; box-sizing: border-box">
+
+    <block wx:for="{{billRecords}}" wx:key="index" >
+
+  <view class="e3" style="position: relative; left: 33rpx; top: 47rpx; width: 612rpx; height: 100rpx; display: flex; box-sizing: border-box">
+
+<view class="t1" style="position: relative; left: 26rpx; top: 25rpx">{{dataList[item.type-1].text}}</view>
+<view class="t2" style="position: relative; left: 12rpx; top: 25rpx">{{item.username}}</view>
+<!-- <view class="t3" style="position: relative; left: -33rpx; top: 73rpx"></view> -->
+<view class="t4" style="position: relative; left: 26rpx; top: 25rpx">{{item.createTime}}</view>
+<view class="t5" style="position: relative;left: 50rpx; top: -5rpx">{{item.status==1?"+":"-"}}{{filters.toFix(item.price/100)}}</view>
+
+</view>      
+    </block>
+
+
+
+
+</view>
+

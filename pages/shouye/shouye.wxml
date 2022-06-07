@@ -1,0 +1,79 @@
+<wxs module="filters" src="../filter.wxs"></wxs>
+
+<!-- 自定义顶部导航 -->
+<view class="navbar custom-class" style='height:{{navHeight}}px;'>
+  <view class='navbar-title' style="width: 750rpx; height: 66rpx; display: flex; box-sizing: border-box; left: 68rpx">
+    <view class="search-input">
+          <!-- 自定义区域 -->
+          <navigator url="../search/search" style="width: 430rpx; height: 64rpx; display: block; box-sizing: border-box"><image  src="../images2/icon-search.png" style="width: 71rpx; height: 61rpx; display: block; box-sizing: border-box; left: 12rpx; top: 0rpx"></image>
+            <input class="search-size" confirm-type="search" value="{{inputValue}}" type="text" bindinput="getInputValue" placeholder="搜索账本或商品" placeholder-class="phcolor" style="width: 261rpx; height: 61rpx; display: block; position: relative; box-sizing: border-box; left: 97rpx; top: -54rpx"></input>
+          </navigator>
+          
+    </view>
+  </view>
+</view>
+ 
+ 
+
+ 
+<!--图片轮播 -->
+<swiper class="content-info-slide" indicator-color="rgba(#a5e8f6,.5)" indicator-active-color="#a5e8f6" indicator-dots circular autoplay>
+    <swiper-item>
+      <image src="../images2/index1.jpg" />
+    </swiper-item>
+    <swiper-item>
+      <image src="../images2/index2.jpg" />
+    </swiper-item>
+    <swiper-item>
+      <image src="../images2/index3.jpg" />
+    </swiper-item>
+    <swiper-item>
+      <image src="../images2/index4.jpg" />
+    </swiper-item>
+  </swiper>
+<!-- 我的账本 -->
+  <view id="accountView">
+        <image src="../images2/icon-accountbook.png"></image>
+        <text>我的账本</text>
+  </view>
+
+
+ <!-- 遍历出所有的账单 -->
+  <block wx:for="{{allBill}}" wx:key="index">
+  <!-- 默认账本 -->
+  <view id="acc1" style="width: 727rpx; height: 230rpx; display: block; box-sizing: border-box; position: relative; left: 3rpx; top: 0rpx">
+    <view class="t1" style="width: 725rpx; height: 225rpx; display: flex; box-sizing: border-box">
+<view class='text'style="position: relative" style="position: relative; left: -230rpx; top: 36rpx; width: 165rpx; height: 45rpx; display: block; box-sizing: border-box">{{item.billName}}</view> 
+<view class="gerk" style="position: relative; left: -111rpx; top: -36rpx; width: 61rpx; height: 45rpx; display: block; box-sizing: border-box"></view>
+<view class='text' style="position: relative; left: -111rpx; top: -80rpx; width: 61rpx; height: 45rpx; font-size: 13px; display: block; box-sizing: border-box">{{item.sharing == 1? "共享":"个人"}}</view>
+<view class='text' style="position: relative; left: 225rpx; top: -122rpx; width: 237rpx; height: 45rpx; font-size: 13px; display: block; box-sizing: border-box">总收入：<view class="sr" style="position: relative; left: 106rpx; top: -38rpx; width: 97rpx; height: 47rpx; display: flex; box-sizing: border-box">{{ filters.toFix(item.income/100) }}</view></view>
+<view class='text'style="position: relative" style="position: relative; left: 225rpx; top: -113rpx; width: 237rpx; height: 45rpx; font-size: 13px; display: block; box-sizing: border-box">总支出：<view class="zc" style="position: relative; left: 106rpx; top: -43rpx; width: 97rpx; height: 47rpx; display: flex; box-sizing: border-box">{{ filters.toFix(item.expenditure/100) }}</view></view>
+
+     <!-- 分割线 -->
+  <view class="divLine" style="width: 647rpx; height: 3rpx; position: absolute; display: block; box-sizing: border-box; left: 45rpx; top: 113rpx"></view>
+
+</view>
+<view bindtap="toEdit" data-index="{{index}}" style="width: 50rpx; height: 47rpx; display: block; position: relative; box-sizing: border-box; left: 183rpx; top: -99rpx"><image src="../images2/edit.png" style="width: 52rpx; height: 52rpx; display: block; box-sizing: border-box; left: 2rpx; top: 3rpx"></image>
+  <view class='text'style="position: relative" style="left: 0rpx; top: -3rpx; width: 78rpx; height: 50rpx; font-size: 13px; display: block; box-sizing: border-box">编辑</view>
+</view>
+
+<view bindtap="toStatics" data-index="{{index}}" style="width: 50rpx; height: 47rpx; display: block; position: relative; box-sizing: border-box; left: 282rpx; top: -146rpx"><image src="../images2/tongji.png" style="width: 75rpx; height: 75rpx; display: block; position: relative; box-sizing: border-box; left: 0rpx; top: -12rpx"></image>
+  <view class='text'style="left: 0rpx; top: -3rpx; width: 78rpx; height: 50rpx; position:absolute;font-size: 13px; display: block; box-sizing: border-box" style="position: absolute; left: 5rpx; top: 57rpx; width: 75rpx; font-size: 13px; height: 43rpx; display: block; box-sizing: border-box">统计</view>
+</view>
+
+<view bindtap="toInvite" data-index="{{index}}" style="width: 50rpx; height: 47rpx; display: block; position: relative; box-sizing: border-box; left: 390rpx; top: -193rpx"><image src="../images2/addp.png" style="width: 75rpx; height: 68rpx; display: block; position: relative; box-sizing: border-box; left: 10rpx; top: -17rpx"></image>
+  <view  class='text'style="left: 0rpx; top: -3rpx; width: 78rpx; height: 50rpx; position:absolute;font-size: 13px; display: block; box-sizing: border-box" style="position: absolute; left: 17rpx; top: 52rpx; width: 75rpx; font-size: 13px; height: 43rpx; display: block; box-sizing: border-box">邀请</view>
+</view>
+<view bindtap="toExport" data-index="{{index}}" style="width: 50rpx; height: 47rpx; display: block; position: relative; box-sizing: border-box; left: 535rpx; top: -240rpx"><image src="../images2/daochu.png" style="width: 75rpx; height: 68rpx; display: block; position: relative; box-sizing: border-box; left: -12rpx; top: -15rpx"></image>
+  <view class='text'style="left: 0rpx; top: -3rpx; width: 78rpx; height: 50rpx; position:absolute;font-size: 13px; display: block; box-sizing: border-box" style="position: absolute; left: -10rpx; top: 54rpx; width: 75rpx; font-size: 13px; height: 43rpx; display: block; box-sizing: border-box">导出</view>
+</view>
+  </view>
+  </block>
+<!-- 增加账本 -->
+    <view id="accView" style="width: 1rpx; height: 1rpx; display: block; position: fixed; left: 296rpx; top: 397rpx; box-sizing: border-box">
+    <!-- <cover-image style="width: 134rpx; height: 134rpx; display: block; box-sizing: border-box; position: absolute; left: 361rpx; top: 582rpx"  class="icona iconimg" bindtap="add" src="/images/icon-add.png"/> -->
+    <navigator url="../new/new" style="width: 5rpx; height: 113rpx; display: block; position: relative; box-sizing: border-box; left: -10rpx; top: 197rpx"><image src="../images2/icon-add.png" style="width: 72rpx; height: 60rpx; position: relative; left: 36rpx; top: 404rpx; display: inline-block; box-sizing: border-box"></image></navigator>
+    </view>
+
+
+

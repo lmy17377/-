@@ -1,0 +1,270 @@
+/* 顶部搜索框样式 */
+.navbar {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    flex-shrink: 0;
+    background-color: white;
+    }
+    
+    .navbar-title {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 120px;
+    height: 33px;
+    line-height: 33px;
+    left: 0;
+    z-index: 10;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    }
+    
+    .search-input {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    background: #f6f6f6;
+    border-radius: 30rpx;
+    /* margin-top: 2px; */
+    font-size: 25rpx;
+    }
+    
+    
+    .search-con .center-30f2b4d {
+    height: 28px;
+    line-height: 28px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    }
+    .search-con .center-30f2b4d .icon {
+    width: 15px;
+    height: 15px;
+    align-self: center;
+    margin: 0 10px;
+    }
+    .search-con .center-30f2b4d .search-size {
+    width: 60%; 
+    font-size: 24px;
+    font-family: "微软雅黑";
+    }
+    .phcolor {
+    color: #818181;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    }
+    /* nav E */
+    /* 标题部分 */
+    .read-in {
+    margin-top: 30px;
+    padding: 0 40rpx;
+    }
+    
+    
+    page {
+      background: #f8e7ed;
+    }
+    
+    
+    #searchInnerView{
+      /*内容居中*/
+      text-align: center;
+      /* 设置宽高*/
+      width: 350rpx;
+      height:58rpx;
+      /*设置背景颜色*/
+      background:#f8e7ed;
+      /*设置边框*/
+      border:2rpx solid #9c9c9c;
+      /*设置边框圆角*/
+      border-radius: 8rpx;
+      /*设置行高*/
+      line-height: 52rpx;
+      /*设置边框包含在宽高之内*/
+      box-sizing: border-box;
+    }
+    #searchInnerView > image{
+      /* 给图片设置宽和高 */
+      width:44rpx;
+      height:44rpx;
+      /*设置垂直对齐方式*/
+      vertical-align: middle;
+    }
+    #searchInnerView > text{
+      /* 给文字设置大小 */
+      font-size:13px;
+      /* 给文字设置颜色 */
+      color: #a19d9d;
+    }
+    
+    /* 轮播图 */
+    .content-info-slide {
+      height: 350rpx;
+      margin-bottom: 20px;
+    }
+    .content-info-slide image {
+      width: 100%;
+      height: 100%;
+    }
+    
+    /* 我的账本 */
+     #accountView > image{
+       /* 给图片设置宽和高 */
+       width:80rpx;
+       height:80rpx;
+       /*设置垂直对齐方式*/
+       vertical-align: middle;
+       /* 设置图片与文字之间距离 */
+       margin:5px;
+     }
+     #accountView > text{
+       /* 给文字设置大小 */
+       font-size:13px;
+       /* 给文字设置颜色 */
+       color: #000000;
+    }
+    /* 默认账本 */
+    #acc1  {
+      margin-left: 9rpx;
+        /* 设置宽高*/
+        width: 730rpx;
+        height:200rpx;
+        /*设置背景颜色*/
+         background-color:#ffffff;
+        /*设置边框*/
+        border:4rpx solid #000000;
+        /*设置边框圆角*/
+        border-radius: 8rpx;
+        /*设置边框包含在宽高之内*/
+        box-sizing: border-box;
+      }
+      .gerk{
+          /* 设置宽高*/
+          width: 730rpx;
+          height:200rpx;
+           /*设置背景颜色*/
+           background-color:#ffffff;
+           /*设置边框*/
+           border:2rpx solid #9c9c9c;
+           /*设置边框圆角*/
+           border-radius: 8rpx;
+           /*设置边框包含在宽高之内*/
+           box-sizing: border-box;
+      }
+    
+      /*分割线样式*/
+    .divLine{
+      background: #E0E3DA;
+      width: 100%;
+      height: 5rpx;
+      border:2rpx solid #9c9c9c;
+     }
+    /* 增加账本 */
+    #accView  {
+    margin-left: 9rpx;
+      /* 设置宽高*/
+      width: 730rpx;
+      height:200rpx;
+      /*设置背景颜色*/
+       background-color:#ffffff;
+      /*设置边框*/
+      border:2rpx solid #9c9c9c;
+      /*设置边框圆角*/
+      border-radius: 8rpx;
+      /*设置边框包含在宽高之内*/
+      box-sizing: border-box;
+    }
+    
+    .skip.image{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-top: 25px;
+    }
+    
+    .navigation{
+     
+      /*内容居中*/
+      text-align: center;
+      /* 设置宽高*/
+      width: 750rpx;
+      height:110rpx;
+      /*设置背景颜色*/
+      background:#a5e8f6;
+      /*设置边框*/
+      border:2rpx solid #9c9c9c;
+      /*设置边框圆角*/
+      border-radius: 8rpx;
+      /*设置行高*/
+      line-height: 52rpx;
+      /*设置边框包含在宽高之内*/
+      box-sizing: border-box;
+    }
+    .undo{
+       /*设置背景颜色*/
+       background:#a5e8f6;
+       /*设置边框*/
+       border:2rpx solid #9c9c9c;
+       /*设置边框圆角*/
+       border-radius: 8rpx;
+       /*设置行高*/
+       line-height: 52rpx;
+       /*设置边框包含在宽高之内*/
+       box-sizing: border-box;
+    }
+    .doing{
+       /*设置背景颜色*/
+       background:#a5e8f6;
+       /*设置边框*/
+       border:2rpx solid #9c9c9c;
+       /*设置边框圆角*/
+       border-radius: 8rpx;
+       /*设置行高*/
+       line-height: 52rpx;
+       /*设置边框包含在宽高之内*/
+       box-sizing: border-box;
+    }
+    button {
+      background: initial;
+    }
+    
+    button:focus{
+      outline: 0;
+    }
+    
+    button::after{
+      border: none;
+    }
+    
+    
+    .t1{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+    }
+    .sr{
+      width: 20px;
+      height: 20px;
+      background-color: rgba(231, 30, 30, 0.445);
+      display: flex;
+      position: relative;
+    }
+    .zc{
+      width: 20px;
+      height: 20px;
+      background-color: rgba(17, 233, 17, 0.363);
+      display: flex;
+      position: relative;
+    }
+    
+    

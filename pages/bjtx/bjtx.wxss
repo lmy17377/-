@@ -1,0 +1,76 @@
+.an{
+    font-size: 22px;
+    display: flex;
+    position: relative;
+}
+.i1{
+    font-size: 22px;
+    display: flex;
+    position: relative;
+}
+.d1{
+    height: 30px;
+    width: 200px;
+    background-color: #ebf6fa;
+    position: relative;
+    border-radius: 20rpx;
+}
+.d2{
+    height: 30px;
+    width: 200px;
+    background-color: #ebf6fa;
+    position: relative;
+    border-radius: 20rpx;
+}
+.d4{
+    height: 30px;
+    width: 200px;
+    background-color:#ebf6fa ;
+    position: relative;
+    border-radius: 20rpx;
+}
+.text1{
+    display: flex;
+    position: relative;
+}
+.d5{
+    height: 30px;
+    width: 200px;
+    background-color: #ebf6fa;
+    position: relative;
+    border-radius: 20rpx;
+}
+.d3{
+    height: 30px;
+    width: 200px;
+    background-color: #cee8f2;
+    border-radius: 20rpx;
+}
+
+
+.body-view {
+    margin-top: 10px
+  }
+  /* /swtich整体大小及背景色/ */
+  .wx-switch-input {
+  width: 100rpx !important;
+  height: 56rpx !important;
+  background: -webkit-linear-gradient(left,pink,lightblue,skyblue);
+  border: #50d2c2 !important;
+  box-sizing: border-box;
+  }
+  /* /白色样式（false的样式）/ */
+  .wx-switch-input::before {
+  width: 100rpx !important;
+  height: 56rpx !important;
+  }
+  /* /绿色样式（true的样式）/ */
+  .wx-switch-input::after {
+  width: 65rpx !important;
+  height: 56rpx !important;
+  }
+  
+   
+  .class-view {
+    margin-top: 30px
+  }

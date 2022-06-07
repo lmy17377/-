@@ -1,0 +1,28 @@
+<!--pages/new/new.wxml-->
+<view class="wenzi1" style="text-indent:1em;">今天是你记账的</view>
+<view id="wenzi2"  style="text-indent:1em;">第<text class="font1" style="color:rgb(235, 148, 148);font-size: 60rpx"> 1 </text>天</view>
+<view class="ger1" style="width: 694rpx; height: 516rpx; position: relative; left: 29rpx; top: 31rpx; display: block; box-sizing: border-box">
+<view class="ger2" style="width: 636rpx; height: 139rpx; position: relative; left: 29rpx; top: 24rpx; display: block; box-sizing: border-box">
+<view class="ger3" style="width: 270rpx; height: 100rpx; position: relative; left: 24rpx; top: 17rpx; display: block; box-sizing: border-box">
+    <button bindtap="myBill"  data-id="2" style="width: 279rpx; height: 104rpx; background-color: {{color1}}; display: block; box-sizing: border-box; left: -3rpx; top: -3rpx; position: relative">个人账本</button>
+</view>
+<view class="ger4" style="width: 270rpx; height: 100rpx; position: relative; left: 326rpx; top: -83rpx; display: block; box-sizing: border-box">
+    <button bindtap="ourBill" data-id="1"  style="width: 277rpx; height: 104rpx; background-color: {{color2}}; display: block; box-sizing: border-box; left: -10rpx; top: -5rpx; position: relative">共享账本</button>
+</view>
+</view>
+
+
+<form bindsubmit="formSubmit" bindreset="formReset">
+<text class="font1" id='name' style="text-align: center; position: relative; left: 29rpx; top: 64rpx" >账本名称</text>
+<view class="ger5" style="position: relative; left: 200rpx; top: -1rpx; width: 465rpx; height: 80rpx; display: block; box-sizing: border-box">
+<input type="text" name="billName" value="{{billName}}" style="width: 460rpx; height: 75rpx; display: block; box-sizing: border-box"></input></view>
+<text class="font1" style="text-align: center; position: relative; left: 29rpx; top: 30rpx">账本描述</text>
+<view class="ger6" style="position: relative; left: 200rpx; top: -37rpx; width: 465rpx; height: 80rpx; display: block; box-sizing: border-box">
+    <input  type="text" name="content" value="{{content}}"   style="width: 460rpx; height: 75rpx; display: block; box-sizing: border-box"></input></view>
+    <view class="ok" style="position: fixed; left: 181rpx; top: 549rpx; width: 390rpx; height: 78rpx; display: block; box-sizing: border-box">
+<button  form-type='submit'  bindtap='jumpToDetail' class="sub-btn" style="position: relative; left: -26rpx; top: -5rpx">完 成</button>
+
+    </view>
+    </form>
+    
+    </view>

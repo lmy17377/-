@@ -1,0 +1,77 @@
+<!-- 引入保留2位小数点模块 -->
+<wxs module="filters" src="../filter.wxs"></wxs>
+<view class="bj" style="width: 750rpx; height: 100rpx; display: block; box-sizing: border-box; left: 0rpx; top: 22rpx; position: relative">
+<button bindtap = "undo" class="zt1" style="width: 216rpx; height: 60rpx; background-color: {{color1}}; display: block; box-sizing: border-box; left: -167rpx; top: 26rpx; position: relative"><view class="a1" style="position: relative; left: 0rpx; top: -10rpx">月账单</view></button>
+<button bindtap="toYearBill" class="zt1" style="width: 216rpx; height: 60rpx; background-color: {{color2}}; display: block; box-sizing: border-box; left: 139rpx; top: -33rpx; position: relative"><view class="a1" style="position: relative; left: 0rpx; top: -12rpx">年账单</view></button>
+</view>
+
+<!--内容区域-->
+<view>
+<view class="border1" style="position: absolute; left: 24rpx; top: 155rpx; width: 706rpx; height: 146rpx; display: block; box-sizing: border-box">
+<image class="rl_1" src="../image/日历.png" style="width: 80rpx; height: 80rpx; display: inline-block; box-sizing: border-box; left: 0rpx; top: 0rpx"></image>
+
+<picker mode="date" header-text="选择时间" fields="month" value="{{date}}" bindchange="bindDateChange">
+  <view class="font30">
+    <text class="color3"></text>
+    <text class="color6" style="position: relative; left: 90rpx; top: -71rpx">{{date}}▼</text>
+  </view>
+</picker>
+
+<text class="gzc" style="position: relative; left: 0rpx; top: -38rpx; width: 214rpx; height: 50rpx; display: flex; box-sizing: border-box">共支出:{{}}</text>
+<view class="gzc1" style="display: block; box-sizing: border-box; left: 111rpx; top: -87rpx; position: relative">{{billNumCount}}笔</view>
+<text class="hj" style="width: 97rpx; height: 50rpx; display: flex; box-sizing: border-box; left: 350rpx; top: -139rpx; position: relative">合计:</text>
+<view class="t2" style="width: 160rpx; height: 52rpx; display: flex; box-sizing: border-box; left: 439rpx; top: -190rpx; position: relative">¥{{filters.toFix(billCount/100)}}</view>
+</view>
+</view>
+
+<view class="content" style="position: absolute; left: 22rpx; top: 314rpx; width: 702rpx; height: 1000rpx; display: block; box-sizing: border-box">
+
+
+
+<view class="zcgc" style="width: 110rpx; height: 116rpx; display: flex; box-sizing: border-box; left: 24rpx; top: 12rpx; position: relative">构成</view>
+
+
+
+<button bindtap = "getIncome" class="zt2" style="width: 165rpx; height: 60rpx; background-color: {{color3}}; display: block; box-sizing: border-box; left: 45rpx; top: -106rpx; position: relative"><view class="a1" style="position: relative; left: 0rpx; top: -5rpx">收入</view></button>
+<button bindtap="getExpenditure" class="zt2" style="width: 165rpx; height: 60rpx; background-color: {{color4}}; display: block; box-sizing: border-box; left: 238rpx; top: -165rpx; position: relative"><view class="a1" style="position: relative; left: 0rpx; top: -5rpx">支出</view></button>
+
+<view class="one" style="position: relative; left: 26rpx; top: -134rpx; width: 645rpx; height: 455rpx; display: flex; box-sizing: border-box">
+<view class="tjt" style="width: 418rpx; height: 390rpx; display: block; box-sizing: border-box">
+<view class="left">
+	<cover-view class="white" style="position: absolute; left: 218rpx; top: 218rpx"></cover-view>
+	<canvas style="width: 136px; height: 136px; position: relative; left: 68rpx; top: 68rpx" canvas-id="Canvas"></canvas>
+</view></view>
+</view>
+
+<view bindtap="touth" class="two" wx:for="{{billMap}}" wx:key="index" wx:for-index='key' data-index="{{index}}" style="position: relative; left: 26rpx; top: -108rpx; width: 644rpx; height: 90rpx; display: flex; box-sizing: border-box">
+  
+<view class="ee5" style="position: relative; left: 24rpx; top: 10rpx; width: 140rpx; height: 76rpx; display: flex; box-sizing: border-box">{{dataList[key-1].text}}</view>
+<!-- <view style="width: 46rpx; height: 44rpx; margin-top:20rpx;background-color:{{dataList[key-1].color}}; display: block; box-sizing: border-box"></view> -->
+<view class="jdt1" style="position: relative; left: 254rpx; top: 10rpx; width: 205rpx; height: 76rpx; display: flex; box-sizing: border-box">¥{{filters.toFix(item/100)}}</view>
+
+</view>
+
+
+</view>
+<view class="zd" style="position: absolute; left: 23rpx; top: 1338rpx; width: 706rpx; height: 350rpx; display: block; box-sizing: border-box">
+<text class="tt2" style="position: relative; left: 19rpx; top: 3rpx; width: 113rpx; height: 61rpx; display: flex; box-sizing: border-box">账单</text>
+<navigator class="e1" url="../qbzd/qbzd" style="position: relative; left: 483rpx; top: -51rpx; width: 235rpx; height: 61rpx; display: flex; box-sizing: border-box"> 全部账单</navigator>
+<view class="arrow" style="position: relative; left: 647rpx; top: -95rpx"></view>
+<view class="zs" wx:for="{{billDetailsList}}" wx:key="index" style="position: relative; left: 22rpx; top: -57rpx; width: 654rpx; height: 90rpx; display: flex; box-sizing: border-box">
+<image src="../images2/icon-accountbook.png" class="tx" style="width: 70rpx; height: 70rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 9rpx; position: relative"></image>
+<view class="ee3" style="position: relative; left: 0rpx; top: 15rpx; width: 122rpx; height: 60rpx; display: flex; box-sizing: border-box">{{item.billName}}</view>
+<text class="zs2" style="position: relative; left: 38rpx; top: 34rpx; width: 190rpx; height: 61rpx; display: flex; box-sizing: border-box">收入:¥</text>
+<view class="money" style="position: relative; left: -13rpx; top: 29rpx; width: 174rpx; height: 70rpx; display: flex; box-sizing: border-box">{{filters.toFix(item.income/100)}}</view>
+<text class="zs3" style="position: relative; left: 19rpx; top: 37rpx; width: 190rpx; height: 61rpx; display: flex; box-sizing: border-box">支出:¥</text>
+<view class="money1" style="position: relative; left: -42rpx; top: 32rpx; width: 174rpx; height: 70rpx; display: block; box-sizing: border-box">{{filters.toFix(item.expenditure/100)}}</view>
+
+</view>
+
+
+
+
+
+
+
+
+</view>

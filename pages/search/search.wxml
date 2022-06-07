@@ -1,0 +1,49 @@
+<!-- 自定义顶部导航 S -->
+<view class="navbar custom-class" style='height:{{navHeight}}px;'>
+ 
+  <view class='navbar-title' style="top: 0rpx; width: 750rpx; height: 88rpx; display: flex; box-sizing: border-box; left: 0rpx">
+    <view class="search-input">
+      <span class="search-con">
+        <view class="center-30f2b4d" style="width: 330rpx; height: 136rpx; display: flex; box-sizing: border-box">
+          <!-- 自定义区域 -->
+
+          <image class="icon" src="../images2/icon-search.png" catchtap="searchbegin" data-postname="{{inputValue}}" style="width: 52rpx; height: 48rpx; display: block; box-sizing: border-box; position: relative; left: -12rpx; top: -38rpx"></image>
+         <form bindsubmit="formSubmit" >
+          <input class="search-size" name="billName" value="{{keyword}}" type="text"  placeholder="输入关键词" placeholder-class="phcolor" style="width: 196rpx; height: 44rpx; display: block; box-sizing: border-box"></input>
+
+          <button bindtap="searchStart" form-type='submit' style="position: relative; left: 382rpx; top: -62rpx; width: 196rpx; height: 78rpx; display: block; box-sizing: border-box">
+            搜索</button>
+
+          </form>
+
+        </view>
+      </span>
+    </view>
+  </view>
+</view>
+<!-- 自定义顶部导航 E -->
+<view class="read-in">
+  <!-- 最近搜索 S -->
+    <view class="headline" wx:if="{{historyStorage.length!=0}}" hidden="{{historyStorageShow?false:true}}" style="position: relative; left: 5rpx; top: -33rpx">
+      <view class="head-headline justify" style="position: relative; left: 0rpx; top: -57rpx">
+        <view class="headline-size">最近搜索</view>
+        <view class="right size" catchtap="remove">清除</view>
+      </view>
+      <!-- 最近搜索内容 S -->
+      <view class="lately-main" style="position: relative; left: 0rpx; top: -40rpx">
+        <view class="chunk" wx:for="{{historyStorage}}" wx:key="index" bindtap='routeToSearchResPage' data-index='{{index}}'>
+          <text>{{item}}</text>
+        </view>
+      </view>
+      <!-- 最近搜索内容 E -->
+    </view>
+</view>
+ 
+ 
+<!--搜索结果-->
+<view class="searchresult" wx:if="{{keyword != ''}}" hidden="{{searchresult?false:true}}">
+  <view class="result" wx:for="{{searchResult}}"  wx:key="index" bindtap="toDetail" data-index="{{index}}" data-postname="{{item.billName}}">
+    <view>{{item.billName}}</view>
+    <image src="../images2/icon-left-arrow.png"></image>
+  </view>
+</view>

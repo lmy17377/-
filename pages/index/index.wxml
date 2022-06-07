@@ -1,0 +1,41 @@
+<!--我的-->
+
+<!-- 登录页面 -->
+<view class="head">
+<view class="header">
+    <!-- 如果userInfo为空时显示 -->
+    <view class="title" wx:if="{{!userInfo}}">
+        <image class="moren"></image>
+        <button class="login" bindtap="login" style="position: relative; left: -10rpx; top: -111rpx; width: 195rpx; height: 97rpx; display: block; box-sizing: border-box">登录</button>
+    </view>
+    <!-- 如果userInfo有值时显示 -->
+    <view class="title" wx:else>
+        <image class="moren" src="{{userInfo.avatarUrl}}" ></image>
+        <view class="name">{{userInfo.nickName}}</view>
+    </view>
+</view>
+</view>
+
+  <view class="set" style="position: absolute; left: 375rpx; top: 340rpx">
+    <!-- 购物提醒 -->
+
+  <view class="one" style="width: 644rpx; height: 84rpx; display: block; box-sizing: border-box">
+  <navigator url="../remind/remind" class="gwtx" bindtap="gwtx">
+  <image style="position: absolute; left: 94rpx; top: 92rpx"  src="../image/1.jpg" class="ttt2" />
+  <view class="title1" style="width: 169rpx; height: 59rpx; display: block; box-sizing: border-box; position: absolute; left: 78rpx; top: 136rpx">购物提醒</view>
+  </navigator>
+  </view>
+
+    <!--联系客服 -->
+  <view class="two" style="width: 620rpx; height: 84rpx; display: block; box-sizing: border-box"><button class="lxkf" open-type="contact" bindtap="lxkf" style="position: relative; left: 8rpx; top: 3rpx; width: 340rpx; height: 75rpx; display: block; box-sizing: border-box">
+   <image src="../image/2.jpg"   class="ttt" style="width: 71rpx; height: 68rpx; display: block; box-sizing: border-box; position: absolute; left: 47rpx; top: 17rpx"></image>
+  联系客服
+  </button>
+  </view>
+<!-- 退出登录 -->
+  <view class="three" style="width: 620rpx; height: 84rpx; display: block; box-sizing: border-box"><button class="loginOut" bindtap="loginOut" style="width: 364rpx; height: 80rpx; display: block; box-sizing: border-box; left: 3rpx; top: 0rpx; position: relative">
+  <image src="../image/3.jpg" class="ttt1"  style="position: absolute; left: 63rpx; top: 15rpx"></image>
+  退出登录
+  </button>
+  </view>
+</view>

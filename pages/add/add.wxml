@@ -1,0 +1,83 @@
+<view class="wenzi1" style="text-indent:1em;">今天是你记账的</view>
+<view id="wenzi2"  style="text-indent:1em;">第<text class="font1" style="color:rgb(235, 148, 148);font-size: 60rpx"> 1 </text>天</view>
+
+<view class='border2'  style="position: absolute; left: 5rpx; top: 126rpx; width: 657rpx; height: 891rpx; display: block; box-sizing: border-box">
+
+<form bindsubmit="formSubmit">
+<view class='list' style="width: 572rpx; height: 45rpx; display: block; box-sizing: border-box">
+
+<view class='info1' style="position: relative; left: 40rpx; top: 23rpx; width: 561rpx; height: 80rpx; display: flex; box-sizing: border-box">
+<div>
+<button bindtap="changeType1" class="btn1" style="width: 254rpx; position: relative; background-color: {{color1}};left: 5rpx; top: 31rpx">收入</button>
+<button bindtap="changeType2" class="btn2" style="position: relative;background-color: {{color2}}; width: 254rpx; left: 298rpx; top: -52rpx; height: 83rpx; display: block; box-sizing: border-box">支出</button>
+</div>
+  </view>
+
+ 
+
+<view class='info' style="position: relative; left: 43rpx; top: 95rpx; width: 560rpx; height: 80rpx; display: flex; box-sizing: border-box">
+    <image src="../images/日期.png" style="position: relative; width: 40rpx; height: 40rpx; display: block; box-sizing: border-box; left: 0rpx; top: 2rpx"/>
+    <picker mode="date" value="{{createDate}}" start="2020-01-01" end="2089-01-01" bindchange="bindDateChange" >
+                <view class="picker" style="width: 481rpx; height: 43rpx; display: block; box-sizing: border-box;color: black;">
+                    日期: {{createDate}}
+                    <input name="createDate" id="{{createDate}}" value="{{date}}" 
+                    style="display:none" />
+                </view>
+            </picker>
+</view>     
+
+
+  <view class='info' style="position: relative; left: 43rpx; top: 120rpx; width: 560rpx; height: 80rpx; display: flex; box-sizing: border-box">
+    <text>金额：</text>
+    <image src="../images/金额.png" style="position: relative; width: 45rpx; height: 45rpx; display: block; box-sizing: border-box; left: -143rpx; top: -2rpx"/>
+    <input name="money" type='number' value="{{price}}" class="remarks"  style="width: 298rpx; height: 45rpx; display: block; box-sizing: border-box; position: relative; left: 29rpx; top: 0rpx"></input>
+  </view>
+  <view class='info' style="position: relative; left: 43rpx; top: 145rpx; width: 561rpx; height: 85rpx; display: flex; box-sizing: border-box">
+    <text style="position: relative; left: 29rpx; top: -2rpx">分类：</text>
+    <image src="../images/分类.png" style="position: relative; width: 38rpx; height: 38rpx; display: block; box-sizing: border-box; left: -110rpx; top: 2rpx"/>
+    <view class="hotService">
+	<view class="hotServiceList_box" style="position: relative; left: 50rpx; top: 45rpx">
+	<!-- 这里为滚动的内容部分 -->
+			<scroll-view class="hotServiceList_scroll" scroll-x="true" bindscroll="getleft">
+				<view class="hotService_content">
+					<block wx:for="{{dataList}}" wx:key="index">
+						<view class="block{{index}} block">
+							<view class="blockContent">
+								<button bindtap="changeColor" class="btnhd text-over {{item.checked?'checked_parameter':''}}" data-index="{{index}}">{{item.text}}</button>
+							</view>
+						</view>
+					</block>
+				</view>
+			</scroll-view>
+	</view>
+</view>
+  </view>
+<view class='info' style="position: relative; left: 43rpx; top: 170rpx; width: 561rpx; height: 85rpx; display: flex; box-sizing: border-box">
+    <text style="position: relative; left: -9rpx; top: 0rpx">备注:</text>
+    <image src="../images/备注.png" style="position: relative; width: 38rpx; height: 40rpx; display: block; box-sizing: border-box; left: -120rpx; top: 2rpx"/>
+    <input name="remarks" type='text'  class="remarks"  style="width: 312rpx; height: 60rpx; display: block; box-sizing: border-box; position: relative; left: 43rpx; top: 0rpx"></input>
+</view>
+<view class='info' style="position: relative; left: 43rpx; top: 195rpx; width: 565rpx; height: 85rpx; display: flex; box-sizing: border-box">
+    <text style="position: relative; width: 115rpx; height: 40rpx; display: block; box-sizing: border-box; left: 40rpx; top: 0rpx">添加到:</text>
+    <image src="../images/添加.png" style="position: relative; width: 40rpx; height: 40rpx; display: block; box-sizing: border-box; left: -115rpx; top: 0rpx"/>
+    <view class="hotService">
+	<view class="hotServiceList_box" style="position: relative; left: 43rpx; top: 47rpx">
+	<!-- 这里为滚动的内容部分 -->
+			<scroll-view class="hotServiceList_scroll" scroll-x="true" bindscroll="getleft">
+				<view class="hotService_content">
+					<block wx:for="{{billList}}" wx:key="index">
+						<view class="block{{index}} block" style='white-space:nowrap'>
+							<view class="blockContent">
+								<button bindtap="getBillId" class="category-item category-{{activeIndex == index ? 'selected' : 'unselect'}}" data-index="{{index}}" style="padding-left: 0; display: flex;">{{item.billName}}</button>
+							</view>
+						</view>
+					</block>
+				</view>
+			</scroll-view>
+	</view>
+</view>
+</view>
+</view>
+<button  class="btnwc" form-type='submit' style="position: absolute; left: 136rpx; top: 760rpx; width: 368rpx; height: 97rpx; display: block; box-sizing: border-box">完成</button>
+</form>
+</view>

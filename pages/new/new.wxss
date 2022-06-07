@@ -1,0 +1,79 @@
+/* pages/new/new.wxss */
+
+
+.ger1{
+    background-color: #a5e9f680;
+    border:3rpx solid #9c9c9c;
+    /*设置边框圆角*/
+    border-radius: 20rpx;
+    /*设置边框包含在宽高之内*/
+    box-sizing: border-box;
+}
+.ger2{
+    background-color: #a5e9f6;
+    border:3rpx solid #9c9c9c;
+    /*设置边框圆角*/
+    border-radius: 20rpx;
+    /*设置边框包含在宽高之内*/
+    box-sizing: border-box;
+}
+.ger3{
+    background-color: #a5e9f6;
+    border:3rpx solid #9c9c9c;
+    /*设置边框圆角*/
+    border-radius: 20rpx;
+    /*设置边框包含在宽高之内*/
+    box-sizing: border-box;
+}
+.ger4{
+    background-color: #a5e9f6;
+    border:3rpx solid #858585;
+    /*设置边框圆角*/
+    border-radius: 20rpx;
+    /*设置边框包含在宽高之内*/
+    box-sizing: border-box;
+}
+.ger5 {
+    background-color: #ffffff;
+    border:3rpx solid #9c9c9c;
+    /*设置边框圆角*/
+    border-radius: 20rpx;
+    /*设置边框包含在宽高之内*/
+    box-sizing: border-box;
+}
+.ger6 {
+    background-color: #ffffff;
+    border:3rpx solid #9c9c9c;
+    /*设置边框圆角*/
+    border-radius: 20rpx;
+    /*设置边框包含在宽高之内*/
+    box-sizing: border-box;
+}
+.ok{
+    background-color: #a5e9f6;
+    border:3rpx solid #858585;
+    /*设置边框圆角*/
+    border-radius: 20rpx;
+    /*设置边框包含在宽高之内*/
+    box-sizing: border-box;
+}
+.sub-btn{
+    background-color: #a5e9f6;
+}
+.bottom-btn {
+    position: fixed; 
+    
+     padding-left: 3rem; 
+    /* padding-right: 8%; */
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    bottom: 0;
+    width: 75%;
+    height: 2rem;
+    text-align: center; 
+    background-color: #ffffff;
+}
+.van-button{
+    
+    width:50%;
+}

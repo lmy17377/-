@@ -1,0 +1,179 @@
+.border1
+  {
+    position: absolute;
+    left: 99rpx;
+    top: 3rpx
+  }
+
+page{
+  background: #eee;
+}
+.add1{
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  display: flex;
+  position: relative;
+}
+.t{
+  display: flex;
+  position: relative;
+}
+.list{
+  color: #6f6f6f;
+  font-size: 32rpx;
+}
+.icon-r{
+  width: 20rpx;
+  height: 30rpx;
+}
+.date,.money,.remarks,.add,.info{
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #eee;
+  font-size:28rpx
+}
+.name input,.phone input,.info input{
+  text-align:right;
+}
+.btnwc{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #6699FF;
+  border-radius: 80rpx;
+  box-shadow: 0px 2px 4px #67c0f0,0px 1px 2px #bf2fcb;
+}
+.border2{
+  width:280px;
+  height: 360px;
+  position: absolute;
+  top: -85rpx;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: #cee8f2;
+  border-radius:5%;
+}
+text{
+  color:#000000
+}
+.info {
+  background-color: #e7f4f9;
+  color: #d6d0d0;
+  font-size: 35rpx;
+  justify-content: center;
+  align-items: center;
+  /* 实线边框solid */
+border-style: solid;
+/* 圆角弧度radius */
+border-radius: 10px;
+/* 边框大小设置 */
+border-width: 1px;
+/* 输入框长度设置 */
+width: 561rpx; 
+height: 80rpx;
+ display: flex;
+  box-sizing: border-box;
+   position: relative;
+    left: 40rpx; 
+    top: 25rpx
+}
+.remarks{
+  border-radius: 15rpx;
+  font-size: 35rpx;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  height: 73rpx;
+  display: flex;
+  box-sizing: border-box; 
+  left: -155rpx; 
+  top: 31rpx;
+}
+.i1 {
+  margin-top: 50px;
+  width: 100%;
+  height: 200px;
+}
+.btn1{
+  /* 字体颜色 */
+  color: #6699FF;
+  border-radius: 80rpx;
+  font-size: 35rpx;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px #67c0f0,0px 1px 2px #bf2fcb;
+
+}
+.btn2{
+  /* 字体颜色 */
+  color: #6699FF;
+  border-radius: 80rpx;
+  font-size: 35rpx;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px #67c0f0,0px 1px 2px #bf2fcb;
+}
+.hotService{
+  width: 70%;
+  height: 150rpx;
+  padding: 0 26rpx;
+  box-sizing: border-box;
+}
+.hotServiceList_box {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  height: 150rpx;
+  padding: 0 26rpx;
+  box-sizing: border-box;
+}
+
+.block {
+  width: 158rpx;
+  height: 60rpx;
+  padding: 0 10rpx;
+  display: inline-block;
+ 
+}
+.blockContent{
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block:first-child {
+  padding: 0 15rpx 0 0;
+}
+.btnhd{
+  /* 字体颜色 */
+  color: #6699FF;
+  border-radius: 20rpx;
+  
+}
+.checked_parameter {
+  color:white;
+  background-color: rgb(113, 236, 252);
+}
+.category-unselect {
+  color: #6c6c6c;
+  background: #f9f9f9;
+  text-align: center;
+}
+.category-selected {
+  color: #1d1c1b;
+  background: rgb(214, 17, 17);
+  text-align: center;
+
+}

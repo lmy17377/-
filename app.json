@@ -1,0 +1,58 @@
+{
+  "cloud": true,
+  "pages":[
+    "pages/shouye/shouye",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/logs1/logs1",
+    "pages/remind/remind",
+    "pages/add/add",
+    "pages/search/search",
+    "pages/qbzd1/qbzd1",
+    "pages/edit/edit",
+    "pages/new/new",
+    "pages/statics/statics",
+    "pages/statics1/statics1",
+    "pages/qbzd/qbzd",
+    "pages/bjtx/bjtx",
+    "pages/bjtx1/bjtx1"
+
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f8e7ed",
+    "navigationBarTitleText": "醒记",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+
+"tabBar": {
+  "color": "#666666",
+  "selectedColor": "#f10b2e",
+  "list": [
+    {
+      "pagePath": "pages/shouye/shouye",
+      "iconPath":"pages/image3/名称5.png",
+      "selectedIconPath": "pages/image3/名称6.png"
+    },
+    {
+      "pagePath": "pages/statics/statics",
+      "iconPath":"pages/image3/名称8.png",
+      "selectedIconPath": "pages/image3/名称7.png"
+    },
+    {
+      "pagePath": "pages/add/add",
+      "iconPath":"pages/image3/名称1.png",
+      "selectedIconPath": "pages/image3/名称.png"
+    },
+    {
+      "pagePath": "pages/index/index",
+      "iconPath":"pages/image3/名称3.png",
+      "selectedIconPath": "pages/image3/名称2.png"
+    }
+  ]
+}
+}
+
